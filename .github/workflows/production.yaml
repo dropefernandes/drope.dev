@@ -1,0 +1,17 @@
+name: CI - Drope.Dev to PROD 🚀
+
+on: [push]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node.js 🐢
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+      - name: run install and build 🚀🧑🏽‍💻
+        run: |
+          npm install
+          npm run build
